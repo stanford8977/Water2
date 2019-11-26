@@ -19,5 +19,6 @@ public class ResultActivity extends AppCompatActivity {
         TextView textfee =findViewById(R.id.fee);
         int n =(int) (outcome+0.5);
         textfee.setText(n+"");
+        
     }
 }

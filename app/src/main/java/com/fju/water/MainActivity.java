@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                         outcome =(monthn*12.075f)-110.25f;
                     }
                     Intent intent=new Intent(MainActivity.this,ResultActivity.class);
-                    intent.putExtra("fee",outcome);
+                    intent.putExtra(getString(R.string.extra_fee),outcome);
                     startActivity(intent);
            /* new AlertDialog.Builder(MainActivity.this)
                     .setTitle("每月抄表")
@@ -90,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                     new AlertDialog.Builder(MainActivity.this)
                             .setTitle("隔月抄表")
-                            .setMessage("費用: "+outcome)
-                            .setPositiveButton("ok",null)
+                            .setMessage(getString(R.string.fee)+outcome)
+                            .setPositiveButton(getString(R.string.ok),null)
                             .show();
                 }
                 else if (TextUtils.isEmpty(next.getText().toString())&&TextUtils.isEmpty(month.getText().toString())){
